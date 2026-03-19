@@ -1,0 +1,91 @@
+/* Changing the font family of every single element */
+* {
+  font-family: ui-monospace;
+}
+
+/* Setting body as a flex container to manager empty space between elements inside */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Remove default margins and padding to remove the unwanted spillage and scrollbar */
+/* Height 100% allows to stretch the content across whole viewport */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  display: flex;
+  background-color: #1db954;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Added styling to the brand name */
+#brand_name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Removed underline from anchor tags in navbar */
+.nav_links {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+}
+
+/* Again defining the main section as flexbox to stack the elements like buttons and text vertically.  */
+.main_section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Basic styling for action button */
+.cta_button {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* A footer?? */
+.footer {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Hides the mobile preview by default */
+.mobile_preview {
+  display: none;
+}
+
+/* Media query for screens having at most 600 */
+@media screen and (max-width: 600px) {
+  #nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .cta_button,
+  #nav {
+    background-color: blueviolet;
+  }
+  /* Shows the mobile preview on small screens */
+  .mobile_preview {
+    display: block;
+  }
+  .desktop_preview {
+    display: none;
+  }
+}
