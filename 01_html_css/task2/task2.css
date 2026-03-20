@@ -18,25 +18,6 @@ body {
   padding: 0;
 }
 
-/* Media query for screens having at most 600 */
-@media screen and (max-width: 600px) {
-  #nav {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .cta_button,
-  #nav {
-    background-color: blueviolet;
-  }
-  /* Shows the mobile preview on small screens */
-  .mobile_preview {
-    display: block;
-  }
-  .desktop_preview {
-    display: none;
-  }
-}
-
 #nav {
   display: flex;
   background-color: #1db954;
@@ -142,4 +123,23 @@ body {
 
 .card_desc {
   color: #555;
+}
+
+/* Media query for screens having at most 600 */
+@media screen and (max-width: 600px) {
+  #nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .cta_button,
+  #nav {
+    background-color: blueviolet;
+  }
+  /* Shows the mobile preview on small screens */
+  .mobile_preview {
+    display: block;
+  }
+  .desktop_preview {
+    display: none;
+  }
 }
