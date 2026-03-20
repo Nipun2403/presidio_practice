@@ -1,0 +1,145 @@
+/* Changing the font family of every single element */
+* {
+  font-family: ui-monospace;
+}
+
+/* Setting body as a flex container to manager empty space between elements inside */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Remove default margins and padding to remove the unwanted spillage and scrollbar */
+/* Height 100% allows to stretch the content across whole viewport */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media query for screens having at most 600 */
+@media screen and (max-width: 600px) {
+  #nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .cta_button,
+  #nav {
+    background-color: blueviolet;
+  }
+  /* Shows the mobile preview on small screens */
+  .mobile_preview {
+    display: block;
+  }
+  .desktop_preview {
+    display: none;
+  }
+}
+
+#nav {
+  display: flex;
+  background-color: #1db954;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Added styling to the brand name */
+#brand_name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Removed underline from anchor tags in navbar */
+.nav_links {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+}
+
+/* Again defining the main section as flexbox to stack the elements like buttons and text vertically.  */
+.main_section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Basic styling for action button */
+.cta_button {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* A footer?? */
+.footer {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Hides the mobile preview by default */
+.mobile_preview {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+/*                                                               TASK 2 CSS BELOW                                                                 */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Card Style  */
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out,
+    background-color 0.3s ease-out;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Album cover styling */
+.album_cover {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Hover effect of the card */
+.card:hover {
+  transform: scale(1.05);
+  background-color: #4a4a4a;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Change text color for title and desc when hovering on any area of the card */
+.card:hover .card_title,
+.card:hover .card_desc {
+  color: white;
+}
+
+/* Grayscale and invert filter/effect when hovered on card */
+.card:hover .album_cover {
+  /* filter: invert(0.8) hue-rotate(10deg); */
+  filter: invert(1) grayscale(0.8);
+}
+
+/* Text styling */
+.card_title {
+  margin: 15px 0 10px;
+}
+
+.card_desc {
+  color: #555;
+}
