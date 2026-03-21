@@ -1,0 +1,92 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  place-items: center;
+  padding-top: 20px;
+}
+
+.card {
+  margin: 0;
+}
+
+/*  */
+@media screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Dynamic styles for mobile */
+@media screen and (max-width: 600px) {
+  .mobile_preview {
+    display: block;
+  }
+  .desktop_preview {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    margin: 10px;
+  }
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------- */
+/* Task 4 CSS */
+
+/* Menu container */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Dropdown parent */
+.dropdown {
+  position: relative;
+}
+
+/* Submenu hidden by default */
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.5s ease-in;
+}
+
+/* Submenu items */
+.submenu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+.submenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
