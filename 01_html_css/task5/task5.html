@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Linking external CSS file of task 2 to carry over the styles -->
+  <link rel="stylesheet" href="../task2/task2.css">
+
+  <!-- Linking external CSS file of task 3 -->
+  <!-- Linking it after task 2 css to override any conflicting styles -->
+  <link rel="stylesheet" href="../task3/task3.css">
+  <link rel="stylesheet" href="task5.css">
+
+
+  <title>Task 5</title>
+</head>
+
+<body>
+  <header>
+    <!-- Navbar containing navigation links -->
+    <nav id="nav">
+      <p id="brand_name">SpotiFav</p>
+      <a class="nav_links" href="#">Home</a>
+      <a class="nav_links" href="#">Search</a>
+      <a class="nav_links" href="#">Library</a>
+    </nav>
+  </header>
+
+  <section class="main_section">
+    <h1>Welcome to SpotiFav (Task 5)</h1>
+    <!-- Mobile section only visibile when viewing on a mobile device -->
+    <h2 class="mobile_preview">Mobile View will have only 1 column</h2>
+    <h2 class="desktop_preview">Click the button below to view task 5 modal</h2>
+    <p>My Favorite songs, for you.</p>
+    <a href="#modal" class="cta_button">Click Me !!</a>
+  </section>
+
+  <section>
+    <div class="grid">
+
+      <!-- Div for card -->
+      <div class="card grid-item">
+        <img src="https://i.scdn.co/image/ab67616d0000b273d8de8d8148b7850cdb5c3e5c" alt="Album Cover"
+          class="album_cover">
+        <h2 class="card_title">The Color Voilet</h2>
+        <p class="card_desc">Artist: Tory Lanez</p>
+      </div>
+
+      <div class="card grid-item">
+        <img src="https://m.media-amazon.com/images/I/51zR7LbI2sL._UXNaN_FMjpg_QL85_.jpg" alt="Album Cover"
+          class="album_cover">
+        <h2 class="card_title">Victory Lap Five</h2>
+        <p class="card_desc">Artist: Various Artists</p>
+      </div>
+
+      <div class="card grid-item">
+        <img src="https://i.scdn.co/image/ab67616d0000b273a9da992c2ef398245027d654" alt="Album Cover"
+          class="album_cover">
+        <h2 class="card_title">Feel it</h2>
+        <p class="card_desc">Artist: D4vd</p>
+      </div>
+
+      <div class="card grid-item">
+        <img src="https://i.scdn.co/image/ab67616d0000b27372bb3efa7a3544b979ac1c60" alt="Album Cover"
+          class="album_cover">
+        <h2 class="card_title">8 Teen</h2>
+        <p class="card_desc">Artist: Khalid</p>
+      </div>
+
+      <div class="card grid-item">
+        <img
+          src="https://cdn-images.dzcdn.net/images/cover/8794f361488905bb3b62546501f4e409/1900x1900-000000-80-0-0.jpg"
+          alt="Album Cover" class="album_cover">
+        <h2 class="card_title">Too Sweet</h2>
+        <p class="card_desc">Artist: Hozier</p>
+      </div>
+
+      <div class="card grid-item">
+        <img src="https://i.scdn.co/image/ab67616d0000b273cec3fc072352b5f4f637d9fa" alt="Album Cover"
+          class="album_cover">
+        <h2 class="card_title">Like That</h2>
+        <p class="card_desc">Artist: Kendrick Lamar</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2024 SpotiFav. All rights reserved.</p>
+  </footer>
+
+
+  <!-- The Actual Modal Code -->
+  <div id="modal" class="modal">
+    <div class="modal_content">
+      <a href="#" class="close_btn">&times;</a>
+      <h2>Welcome to SpotiFav</h2>
+      <p>Enjoy my favorite music collection in one place.</p>
+      <p>Go listen to "The Color Violet" by Tory Lanez.</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
