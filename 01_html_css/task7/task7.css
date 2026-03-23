@@ -1,0 +1,200 @@
+* {
+  font-family: ui-monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  display: flex;
+  background-color: #1db954;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#brand_name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav_links {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+}
+
+.main_section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta_button {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+}
+
+.mobile_preview {
+  display: none;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease-out,
+    box-shadow 0.3s ease-out,
+    background-color 0.3s ease-out;
+  text-align: center;
+}
+
+.album_cover {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #4a4a4a;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card_title,
+.card:hover .card_desc {
+  color: white;
+}
+
+.card:hover .album_cover {
+  filter: invert(1) grayscale(0.8);
+}
+
+.card_title {
+  margin: 15px 0 10px;
+}
+
+.card_desc {
+  color: #555;
+}
+
+.slider {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#s1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#s2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+#s3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.controls label {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#s1:checked ~ .controls label[for="s1"],
+#s2:checked ~ .controls label[for="s2"],
+#s3:checked ~ .controls label[for="s3"] {
+  background: #1db954;
+}
+
+@media screen and (max-width: 1000px) {
+  .slide {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nav {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .cta_button,
+  #nav {
+    background-color: blueviolet;
+  }
+
+  .mobile_preview {
+    display: block;
+  }
+
+  .desktop_preview {
+    display: none;
+  }
+
+  .slide {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

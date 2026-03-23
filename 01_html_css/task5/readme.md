@@ -16,6 +16,6 @@
 - Added a opacity filter using _rgba_ property to create a _depth effect_
 - Used scale property to animate the zoom effect when pop-up window is opened
 
-### 3. Output
+### 2. Output
 
 ![output](output.png)
