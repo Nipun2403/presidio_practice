@@ -1,0 +1,41 @@
+/* Make the content hidden if not selected */
+.cont {
+  display: none;
+}
+
+/* Change the display from none to block to show when a radio button is checked */
+#tab1:checked ~ #top3 {
+  display: block;
+}
+
+#tab2:checked ~ #honorable-mentions {
+  display: block;
+}
+
+.card {
+  margin: 0;
+}
+
+/* Hide the radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Center the radio buttons */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Make it friendly for mobile devices */
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main_section {
+    text-align: center;
+  }
+}
