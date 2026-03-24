@@ -1,0 +1,29 @@
+#tab1:checked ~ #top3 {
+  display: block;
+}
+
+#tab2:checked ~ #honorable-mentions {
+  display: block;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.main_section {
+  flex: none;
+}
+
+#top3 {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+#honorable-mentions {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.content_section {
+  flex: 1;
+}
