@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  /* background-color: #121212; */
+  /* color: white; */
+  font-family: sans-serif;
+}
+
+.header {
+  background: #1db954;
+  padding: 60px 5%;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.overlap-img {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  bottom: -40px;
+  right: 10%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.cta_button {
+  background-color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px 5%;
+}
+
+.music-card {
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.album_cover {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.card_title {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+.card_desc {
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .overlap-img {
+    position: static;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .header {
+    text-align: center;
+    background: blueviolet;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  color: #b3b3b3;
+}
