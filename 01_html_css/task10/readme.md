@@ -2,7 +2,7 @@
 
 ### Objective
 
-- Webpage that combines both grid and flexbox properties
+- A fully functional, multi-section website that simulates the experience of navigating between different pages only with pure css
 
 ### 1. Responsive Layout (Media Query)
 
@@ -21,18 +21,24 @@
 - Used Flexbox layout inside every grid item to align content inside each element of grid vertially and horizontally.
 - Ensure equal spacing between elements and the border within the elements of the grid.
 
-### 4. Other Properties
+### 4. :target pseudo-clss
+
+- Used _:target_ pseudo-class to conditionally pick the section with a given id using url
+- conditionlly show pages like _library_ using the url _/task10.html/#library_ by only rendering section with _id = library_
+- Used _#home:has(~ .page:target)_ so that there is a page present other than home page, is in focus and rendered then the home page is set to _display:none_. This prevernts stacking of home page and any other page that is being conditionally rendered
+
+### 5. Other Properties
 
 - Used Z-Index with relative and absolute positioning to place the image on top of the header.
 - used box shadow to give slight depth effect to the images and card
 - Maintained the same green purple theme, green for desktop screens and purple for mobile devices
 
-### 5. Output
+### 3. Output
 
 **Desktop View**
 
 ![output](output1.png)
 
-**Mobile View**
-
 ![output](output2.png)
+
+![output](output3.png)

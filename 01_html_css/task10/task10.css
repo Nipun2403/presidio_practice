@@ -1,0 +1,170 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 20px 5%;
+  background-color: #1db954;
+  flex-shrink: 0;
+}
+
+nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#brand_name {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+.page {
+  width: 100%;
+  padding: 40px 5%;
+  box-sizing: border-box;
+
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
+}
+
+#home {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page:target {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#home:has(~ .page:target) {
+  display: none;
+  opacity: 0;
+}
+
+.hero {
+  padding: 60px 0;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 30px;
+  border: 1px solid #000;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.music-grid,
+.library-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease-out,
+    background-color 0.3s;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.album_cover {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.card:hover .album_cover {
+  filter: invert(1) grayscale(0.8);
+}
+
+.links a:hover {
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .links a {
+    margin: 0 10px;
+  }
+
+  .music-grid,
+  .library-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .search-box input {
+    width: 70%;
+    max-width: none;
+  }
+
+  .main-nav {
+    background-color: blueviolet;
+  }
+}
+
+.footer {
+  flex-shrink: 0;
+  padding: 40px;
+}
